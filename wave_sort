@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int n;
+	//cin>>n;
+	//to checking purpose i have initialized the value.. 
+	n=7;
+	int arr[n]={1,2,3,4,5,6,7};
+	//and the array..
+//	for(int i=0;i<n;i++) {
+//		cin>>arr[i];	
+//	}
+	for(int i=0;i<n-1;i++) {
+		//even
+		if(arr[i]<arr[i+1]&&i%2==0) {
+			int temp=arr[i];
+			arr[i]=arr[i+1];
+			arr[i+1]=temp;
+		}
+	    //odd
+	    if(arr[i]>arr[i+1]&&i%2==1) {
+	    	int temp=arr[i];
+	    	arr[i]=arr[i+1];
+	    	arr[i+1]=temp;
+		}
+	}
+	for(int i=0;i<n;i++) {
+		cout<<arr[i]<<" ";
+	}
+} 
